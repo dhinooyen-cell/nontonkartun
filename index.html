@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KartunFlix</title>
+
+  <!-- Font modern -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="hamburger" id="hamburger" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">🎬 <span>Kartun</span>Flix</a>
+    </div>
+<ul class="nav-links" id="navLinks">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="premium.html">Premium</a></li>
+  <li><a href="history.html">Riwayat</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+    <div class="nav-right">
+      <div class="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" placeholder="Cari kartun..." />
+      </div>
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <button id="darkModeToggle" class="btn btn-icon" aria-label="Toggle dark mode">🌙</button>
+      <a href="#favorit" class="fav-indicator" id="favIndicator" title="Favorit">❤️<span id="favCount">0</span></a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Nonton Kartun Favoritmu</h1>
+      <p>Seru, edukatif, dan bikin ketagihan. Kapan pun, di mana pun!</p>
+      <div class="hero-cta">
+        <a href="premium.html" class="btn btn-primary">Upgrade Premium</a>
+        <a href="#gallery" class="btn btn-ghost">Jelajah Koleksi</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter -->
+  <section class="filters container">
+    <button class="chip active" data-category="all">Semua</button>
+    <button class="chip" data-category="anak">Anak-anak</button>
+    <button class="chip" data-category="aksi">Aksi</button>
+    <button class="chip" data-category="edukasi">Edukasi</button>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery container" id="gallery">
+    <!-- Card 1 -->
+    <article class="card"
+      data-title="Upin & Ipin"
+      data-category="anak"
+      data-desc="Kisah kembar lucu dari Malaysia yang penuh tawa dan pelajaran hidup."
+      data-link="detail.html?film=upin"
+      data-rating="4.8">
+      <div class="thumb">
+        <img src="https://media.suara.com/pictures/970x544/2025/07/28/50836-game-upin-ipin-universe.jpg" 
+     alt="Upin & Ipin" 
+     loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>Upin & Ipin</h3>
+        <div class="meta">
+          <div class="stars" aria-label="Rating"></div>
+          <span class="cat">Anak-anak</span>
+        </div>
+        <p class="desc">Kocak, ringan, dan sarat pesan moral. Cocok buat semua umur.</p>
+        <div class="actions">
+          <a class="btn btn-primary tonton">▶️ Tonton</a>
+          <button class="btn btn-outline fav">❤️ Favorit</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card"
+      data-title="Adit Sopo Jarwo"
+      data-category="anak"
+      data-desc="Petualangan Adit dan kawan-kawan dengan Sopo & Jarwo yang selalu bikin heboh."
+      data-link="detail.html?film=adit"
+      data-rating="4.5">
+      <div class="thumb">
+       <img src="https://upload.wikimedia.org/wikipedia/id/2/2d/ASJ_MNCTV.jpg" 
+     alt="Adit Sopo Jarwo" 
+     loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>Adit Sopo Jarwo</h3>
+        <div class="meta">
+          <div class="stars"></div>
+          <span class="cat">Anak-anak</span>
+        </div>
+        <p class="desc">Komedi ringan keluarga dengan konflik sehari-hari yang relate.</p>
+        <div class="actions">
+          <a class="btn btn-primary tonton">▶️ Tonton</a>
+          <button class="btn btn-outline fav">❤️ Favorit</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card"
+      data-title="Naruto"
+      data-category="aksi"
+      data-desc="Perjuangan Naruto untuk jadi Hokage. Penuh aksi, persahabatan, dan haru."
+      data-link="detail.html?film=naruto"
+      data-rating="4.9">
+      <div class="thumb">
+       <img src="https://thumbor.prod.vidiocdn.com/SpSOIEMLlKr-tP24MNPav189Pgw=/filters:quality(70)/vidio-media-production/uploads/image/source/21600/025a71.jpg" 
+     alt="Naruto" 
+     loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>Naruto</h3>
+        <div class="meta">
+          <div class="stars"></div>
+          <span class="cat">Aksi</span>
+        </div>
+        <p class="desc">Shonen legendaris: jurus, rivalitas, dan semangat pantang menyerah.</p>
+        <div class="actions">
+          <a class="btn btn-primary tonton">▶️ Tonton</a>
+          <button class="btn btn-outline fav">❤️ Favorit</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card"
+      data-title="Pada Zaman Dahulu"
+      data-category="edukasi"
+      data-desc="Cerita rakyat dan legenda bernilai moral tinggi."
+      data-link="detail.html?film=zaman"
+      data-rating="4.6">
+      <div class="thumb">
+        <<img src="https://upload.wikimedia.org/wikipedia/id/7/7c/Pada_Zaman_Dahulu.jpeg"
+     alt="Pada Zaman Dahulu"
+     loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>Pada Zaman Dahulu</h3>
+        <div class="meta">
+          <div class="stars"></div>
+          <span class="cat">Edukasi</span>
+        </div>
+        <p class="desc">Dongeng klasik yang mendidik dan menyenangkan untuk anak-anak.</p>
+        <div class="actions">
+          <a class="btn btn-primary tonton">▶️ Tonton</a>
+          <button class="btn btn-outline fav">❤️ Favorit</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 KartunFlix • Dibuat dengan ❤️ • Semangat broo, anti mager!</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

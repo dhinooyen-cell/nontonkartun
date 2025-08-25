@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Kartun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🎬 KartunFlix</div>
+    <a href="index.html" class="btn-back">⬅ Kembali</a>
+  </nav>
+
+  <section class="detail-container">
+    <h1 id="film-title">Judul Kartun</h1>
+    <video controls width="100%" class="video-player">
+      <source src="trailer.mp4" type="video/mp4">
+      Browser kamu tidak mendukung video.
+    </video>
+    <p id="film-desc">Deskripsi film akan muncul di sini.</p>
+    
+    <!-- Rating -->
+    <div class="rating">
+      <h3>Beri Rating:</h3>
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+
+    <!-- Komentar -->
+    <div class="comments">
+      <h3>Komentar Penonton</h3>
+      <textarea id="commentInput" placeholder="Tulis komentar..."></textarea>
+      <button id="addComment">Kirim</button>
+      <ul id="commentList"></ul>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
